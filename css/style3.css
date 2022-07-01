@@ -1,0 +1,174 @@
+
+
+/**********************************/
+/********* Portfolio CSS **********/
+/**********************************/
+#portfolio {
+    position: relative;
+    clear: both;
+    padding: 60px 0;
+}
+
+#portfolio .section-header p {
+    margin-bottom: 30px;
+}
+
+#portfolio .portfolio-flters {
+    padding: 0;
+    margin: 0 0 25px 0;
+    list-style: none;
+    text-align: center;
+}
+
+#portfolio .portfolio-flters li {
+    position: relative;
+    margin: 0 7px 5px 7px;
+    display: inline-block;
+    padding: 17px 0 4px 0;
+    color: #3F69AA;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#portfolio .portfolio-flters li::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: calc(50% - 12px);
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 15px solid #3F69AA;
+    border-radius: 50%;
+    transition: .3s;
+    opacity: 0;
+}
+
+#portfolio .portfolio-flters li::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #3F69AA;
+    border-radius: 5px;
+    transition: .3s;
+    opacity: 0;
+}
+
+#portfolio .portfolio-flters li:hover::before,
+#portfolio .portfolio-flters li.filter-active::before,
+#portfolio .portfolio-flters li:hover::after,
+#portfolio .portfolio-flters li.filter-active::after {
+    opacity: 1;
+}
+
+#portfolio .portfolio-container .col-lg-4,
+#portfolio .portfolio-container .col-md-4 {
+    padding: 0;
+}
+
+#portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio .portfolio-item figure {
+    background: #3F69AA;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0;
+    margin: 0;
+}
+
+#portfolio .portfolio-item figure:hover img {
+    opacity: 0.3;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#portfolio .portfolio-item figure .link-preview,
+#portfolio .portfolio-item figure .link-details,
+#portfolio .portfolio-item figure .portfolio-title {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    line-height: 1;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50px;
+    transition: 0.2s linear;
+}
+
+#portfolio .portfolio-item figure .link-preview i,
+#portfolio .portfolio-item figure .link-details i {
+    padding: 12px 0;
+    font-size: 24px;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover,
+#portfolio .portfolio-item figure .link-details:hover {
+    background: #3F69AA;
+}
+
+#portfolio .portfolio-item figure .link-preview:hover i,
+#portfolio .portfolio-item figure .link-details:hover i {
+    color: #ffffff;
+}
+
+#portfolio .portfolio-item figure .link-preview {
+    left: calc(50% - 55px);
+    top: 0;
+}
+
+#portfolio .portfolio-item figure .link-details {
+    right: calc(50% - 55px);
+    top: 0;
+}
+
+#portfolio .portfolio-item figure .portfolio-title {
+    margin: 0;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 30px 10px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: none;
+    border-radius: 0;
+}
+
+#portfolio .portfolio-item figure .portfolio-title span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#portfolio .portfolio-item figure:hover .link-preview {
+    opacity: 1;
+    top: 25%;
+}
+
+#portfolio .portfolio-item figure:hover .link-details {
+    opacity: 1;
+    top: 25%;
+}
+
+#portfolio .portfolio-item figure:hover .portfolio-title {
+    opacity: 1;
+    top: 50%;
+}
+
